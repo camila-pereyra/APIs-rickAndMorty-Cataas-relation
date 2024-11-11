@@ -1,0 +1,32 @@
+.api-containerGral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+.api-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    background-color: rgba(134, 133, 133, 0.479);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 10px 5px 10px  black;
+    margin: 20px;
+
+}
+.api-name {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: 300;
+}
+
+.api-image {
+    width: 100%;
+    border-radius: 30px;
+}
