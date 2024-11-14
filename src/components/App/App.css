@@ -1,7 +1,7 @@
 .app-container{
     width: 100vw;
     min-height: 100vh;
-    background-color: #222;
+    background-color: #6b6b6b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,9 +17,14 @@
 }
 .app-tittle {
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 10px;
     font-family: "Quicksand", sans-serif;
     font-weight: 300;
     text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+.app-tittle span {
+    font-weight: 700;
 }

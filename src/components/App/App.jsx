@@ -14,7 +14,7 @@ const App = () => {
     return (
         <>
             <div className="app-container">
-                <h1 className="app-tittle">APIs CataasAPI & Rick and Morty</h1>
+                <h1 className="app-tittle">APIs utilizadas: <span>Cataas</span> & <span>Rick and Morty</span></h1>
                 <div className="app-containerCard">
                     {!numberID ?
                         <Input formatNumberChose={formatNumberChose} />
