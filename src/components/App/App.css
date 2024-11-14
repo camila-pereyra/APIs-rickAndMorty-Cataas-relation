@@ -1,0 +1,25 @@
+.app-container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.app-containerCard{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+.app-tittle {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: 300;
+    text-align: center;
+}

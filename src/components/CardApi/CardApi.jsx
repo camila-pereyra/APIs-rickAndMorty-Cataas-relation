@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react"
 import "./CardApi.css"
 
-const API_RICK_AND_MORTY = 'https://rickandmortyapi.com/api/character/1'
 
-const CardApi = () => {
+const CardApi = ({numberID}) => {
     const [rickAndMortyName, setRickAndMortyName] = useState()
     const [rickAndMortyImage, setRickAndMortyImage] = useState()
     const [cataasImage, setCataasImage] = useState()
 
     useEffect(() => {
-        fetch(API_RICK_AND_MORTY)
+        fetch(`https://rickandmortyapi.com/api/character/${numberID}`)
             .then((res) => res.json())
             .then((data) => {
                 const firstName = data.name.split(' ')[0]
@@ -23,7 +22,7 @@ const CardApi = () => {
     }, [])
 
     return (
-        <div className="api-containerGral">
+        <>
             <div className="api-container">
                 <strong className="api-name">I am {rickAndMortyName}</strong>
                 <img className="api-image" src={rickAndMortyImage} />
@@ -31,7 +30,7 @@ const CardApi = () => {
             <div className="api-container">
                 <img className="api-image" src={cataasImage} />
             </div>
-        </div>
+        </>
     )
 }
 
