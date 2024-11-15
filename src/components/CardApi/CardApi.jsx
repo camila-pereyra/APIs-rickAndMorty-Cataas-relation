@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import "./CardApi.css"
+import "../Input/Input.css"
 
 
-const CardApi = ({ numberID }) => {
+const CardApi = ({ numberID, reset }) => {
     const [rickAndMortyName, setRickAndMortyName] = useState()
     const [rickAndMortyStatus, setRickAndMortyStatus] = useState()
     const [rickAndMortySpecies, setRickAndMortySpecies] = useState()
@@ -39,6 +40,11 @@ const CardApi = ({ numberID }) => {
                 <strong className="api-used">Cataas API</strong>
                 <strong className="api-name">Devuelve una imagen de un gato saludando al personaje elegido: {rickAndMortyName}</strong>
                 <img className="api-image" src={cataasImage} />
+            </div>
+            <div className="buttonBlock">
+                <div className="effect-card">
+                    <button className="service-button pulse" onClick={reset}>Volver</button>
+                </div>
             </div>
         </>
     )

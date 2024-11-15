@@ -34,3 +34,7 @@
     width: 100%;
     border-radius: 30px;
 }
+.buttonBlock{
+    width: 100%;
+    display :block;
+}

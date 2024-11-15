@@ -8,8 +8,10 @@ const App = () => {
 
     const formatNumberChose = (inputNumber) => {
         setNumberID(inputNumber)
-        console.log("Numero que llega al apretar boton ", numberID);
 
+    }
+    const reset = () => {
+        setNumberID(null)
     }
     return (
         <>
@@ -18,7 +20,7 @@ const App = () => {
                 <div className="app-containerCard">
                     {!numberID ?
                         <Input formatNumberChose={formatNumberChose} />
-                        : <CardApi numberID={numberID} />}
+                        : <CardApi numberID={numberID} reset={reset}/>}
                 </div>
             </div>
 
