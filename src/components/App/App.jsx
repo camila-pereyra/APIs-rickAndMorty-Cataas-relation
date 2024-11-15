@@ -1,5 +1,5 @@
 import CardApi from "../CardApi/CardApi.jsx"
-import Input from "../Input/input.jsx"
+import Input from "../Input/Input.jsx"
 import { useState } from "react"
 import "./App.css"
 
