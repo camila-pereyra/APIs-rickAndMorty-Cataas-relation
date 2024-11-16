@@ -14,17 +14,22 @@ const CardApi = ({ numberID, reset }) => {
         fetch(`https://rickandmortyapi.com/api/character/${numberID}`)
             .then((res) => res.json())
             .then((data) => {
-                const firstName = data.name.split(' ')[0]
                 setRickAndMortyName(data.name)
                 setRickAndMortyStatus(data.status)
                 setRickAndMortySpecies(data.species)
                 setRickAndMortyImage(data.image)
-                fetch(`https://cataas.com/cat/says/Hola%20${firstName}`)
-                    .then(res => {
-                        setCataasImage(res.url)
-                    })
             })
     }, [])
+
+    useEffect(() => {
+        if (!rickAndMortyName) return
+        const firstName = rickAndMortyName.split(' ')[0];
+        fetch(`https://cataas.com/cat/says/Hola%20${firstName}`)
+            .then(res => {
+                setCataasImage(res.url)
+            }
+        )
+    }, [rickAndMortyName])
 
     return (
         <>
