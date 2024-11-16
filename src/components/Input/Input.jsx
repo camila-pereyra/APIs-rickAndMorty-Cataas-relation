@@ -1,12 +1,22 @@
 import { useState } from "react"
 import "./Input.css"
+import Swal from 'sweetalert2'
+
 
 
 const Input = ({ formatNumberChose }) => {
     const [inputNumber, setInputNumber] = useState(1)
 
     const handleClick = () => {
-        formatNumberChose(inputNumber)
+        (inputNumber>0 & inputNumber<827) 
+        ? formatNumberChose(inputNumber)
+        : Swal.fire({
+            title: 'Error!',
+            text: 'El numero elegido debe estar entre 1 y 826',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            className: "alert"
+          })
     }
 
     const changeNumber = (e) => {
@@ -14,10 +24,10 @@ const Input = ({ formatNumberChose }) => {
     }
 
     const addNumber = () => {
-        setInputNumber(inputNumber + 1)
+        setInputNumber(parseInt(inputNumber) + 1)
     }
     const subtractNumber = () => {
-        inputNumber > 1 ? setInputNumber(inputNumber - 1) : setInputNumber(1)
+        setInputNumber(parseInt(inputNumber) - 1) 
     }
 
     return (
